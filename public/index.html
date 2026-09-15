@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero Two AI</title>
+  <meta name="description" content="An intelligent Telegram AI Assistant powered by Node.js, MongoDB, and NVIDIA AI." />
+  <meta property="og:title" content="Zero Two AI" />
+  <meta property="og:description" content="An intelligent Telegram AI Assistant powered by Node.js, MongoDB, and NVIDIA AI." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background Glow & Image Layer -->
+  <div class="bg-gradient-overlay"></div>
+  <div class="bg-image-layer"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo">
+        <span class="logo-horn left"></span>
+        <span class="logo-horn right"></span>
+        <span class="brand-name">Zero Two <span class="brand-accent">AI</span></span>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-item active">Home</a>
+
+        <!-- Features Dropdown -->
+        <div class="dropdown">
+          <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" id="featuresBtn">
+            Features <span class="arrow-icon">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-item">
+              <span class="item-icon">⚡</span>
+              <div>
+                <strong>Fast AI Responses</strong>
+                <p>NVIDIA LLM powered sub-second replies</p>
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <span class="item-icon">🧠</span>
+              <div>
+                <strong>Memory Enabled</strong>
+                <p>MongoDB contextual memory & auto-clearing</p>
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <span class="item-icon">💬</span>
+              <div>
+                <strong>Intelligent Conversations</strong>
+                <p>Darling & Normal user adaptive modes</p>
+              </div>
+            </div>
+            <div class="dropdown-item">
+              <span class="item-icon">🤖</span>
+              <div>
+                <strong>Telegram AI Assistant</strong>
+                <p>Moderation commands, voice, stickers & GIFs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Dropdown -->
+        <div class="dropdown">
+          <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" id="aboutBtn">
+            About <span class="arrow-icon">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-text">
+              <p><strong>Zero Two</strong> is an intelligent AI assistant designed to communicate, assist, and provide helpful responses through Telegram.</p>
+              <p class="dropdown-subtext">Built with Node.js, Express, MongoDB Atlas, and the NVIDIA OpenAI-compatible API engine.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Dropdown -->
+        <div class="dropdown">
+          <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" id="contactBtn">
+            Contact <span class="arrow-icon">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-text">
+              <p><strong>Owner's info</strong></p>
+              <p>Zero two is a bot made by developer name: <strong>DEV</strong></p>
+              <div class="contact-links">
+                <a href="https://t.me/Meow9637" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                  <span>✈️</span> Telegram @Meow9637
+                </a>
+                <a href="https://github.com/Ravisharma9637/" target="_blank" rel="noopener noreferrer" class="contact-btn secondary">
+                  <span>🐙</span> Owner GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Right Action & Mobile Toggle -->
+      <div class="header-actions">
+        <a href="https://t.me/zero_two_9637_bot" target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
+          <span>✈️</span> Add Bot
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Hero Container -->
+  <main class="main-content">
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+        <!-- Hero Left / Content Column -->
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Production Ready Telegram Bot • Online</span>
+          </div>
+
+          <h1 class="hero-title">
+            Zero Two <span class="glow-text">AI</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            An intelligent Telegram AI Assistant.
+          </p>
+
+          <p class="hero-description">
+            Experience real personality-driven AI with contextual MongoDB memory, voice transcription, custom sticker and GIF reactions, plus powerful group administration tools.
+          </p>
+
+          <!-- Primary Action Links specified in prompt -->
+          <div class="hero-buttons-grid">
+            <a href="https://t.me/zero_two_9637_bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-add-telegram">
+              <span class="btn-icon">✈️</span>
+              <span class="btn-text">Add to Telegram</span>
+            </a>
+
+            <a href="https://github.com/Ravisharma9637/zero-two-bot" target="_blank" rel="noopener noreferrer" class="btn btn-glass" id="btn-github-repo">
+              <span class="btn-icon">📂</span>
+              <span class="btn-text">GitHub Repo</span>
+            </a>
+
+            <a href="https://github.com/Ravisharma9637/" target="_blank" rel="noopener noreferrer" class="btn btn-glass" id="btn-owner-github">
+              <span class="btn-icon">👤</span>
+              <span class="btn-text">Owner's GitHub</span>
+            </a>
+
+            <a href="https://as2.ftcdn.net/jpg/06/70/50/93/1000_F_670509316_LWjWwytJJIHPVZZzBR2i6VMYo5qtC7VG.webp" target="_blank" rel="noopener noreferrer" class="btn btn-glass" id="btn-sunshine-ai">
+              <span class="btn-icon">☀️</span>
+              <span class="btn-text">Sunshine AI</span>
+            </a>
+
+            <a href="https://dropmail-4ckv.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-glass" id="btn-dropmail">
+              <span class="btn-icon">📬</span>
+              <span class="btn-text">Dropmail</span>
+            </a>
+          </div>
+
+          <!-- Live System Status Card -->
+          <div class="status-card glass-panel" id="statusCard">
+            <div class="status-header">
+              <div class="pulse-indicator" id="pulseIndicator"></div>
+              <span class="status-title">System Status (Render / Express)</span>
+              <span class="status-badge" id="statusBadge">Checking...</span>
+            </div>
+            <div class="status-details">
+              <div class="status-metric">
+                <span class="metric-label">Bot Process:</span>
+                <span class="metric-val" id="valBot">Checking...</span>
+              </div>
+              <div class="status-metric">
+                <span class="metric-label">Database:</span>
+                <span class="metric-val" id="valDb">Checking...</span>
+              </div>
+              <div class="status-metric">
+                <span class="metric-label">Uptime:</span>
+                <span class="metric-val" id="valUptime">0s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right / Zero Two Visual & Live Interactive Simulator -->
+        <div class="hero-visual-column">
+          <div class="visual-wrapper glass-panel">
+            <div class="image-showcase">
+              <div class="image-ambient-glow"></div>
+              <img
+                src="/images/zerotwo.png"
+                alt="Zero Two AI Assistant"
+                class="zerotwo-hero-img"
+                id="heroZeroTwoImage"
+                onerror="this.onerror=null; this.src='/images/zerotwo.svg';"
+              />
+              <div class="character-overlay-tag">
+                <span class="horns-icon">😈</span>
+                <span>Zero Two #002</span>
+              </div>
+            </div>
+
+            <!-- Interactive Web Chat Simulator -->
+            <div class="chat-simulator-box" id="chatSimBox">
+              <div class="sim-header">
+                <div class="sim-user-info">
+                  <div class="sim-avatar">02</div>
+                  <div>
+                    <div class="sim-name">Zero Two AI</div>
+                    <div class="sim-status">online • web preview</div>
+                  </div>
+                </div>
+                <div class="sim-mode-toggle">
+                  <label class="toggle-switch" title="Toggle Darling Personality Mode">
+                    <input type="checkbox" id="darlingToggle" checked />
+                    <span class="slider"></span>
+                  </label>
+                  <span class="toggle-label" id="toggleLabel">Darling Mode</span>
+                </div>
+              </div>
+
+              <!-- Chat messages container -->
+              <div class="sim-messages" id="simMessages">
+                <div class="msg-bubble bot">
+                  <span class="bubble-sender">Zero Two</span>
+                  <p>Darling~ Finally you came to check on me! Did you eat today? Don't make me worry 💗 meowww</p>
+                  <span class="bubble-time">Just now</span>
+                </div>
+              </div>
+
+              <!-- Quick Command Chips -->
+              <div class="quick-chips">
+                <button class="chip" data-cmd="/ping">/ping</button>
+                <button class="chip" data-cmd="/help">/help</button>
+                <button class="chip" data-cmd="/about">/about</button>
+                <button class="chip" data-cmd="Do you love me?">Love</button>
+                <button class="chip" data-cmd="How do I deploy on Render?">Render Deploy</button>
+              </div>
+
+              <!-- Input Form -->
+              <form class="sim-input-bar" id="simForm">
+                <input
+                  type="text"
+                  id="simInput"
+                  placeholder="Send a message or command..."
+                  autocomplete="off"
+                  maxlength="500"
+                />
+                <button type="submit" id="simSendBtn" aria-label="Send message">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Bento Grid -->
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <h2 class="section-title">Engineered for Telegram</h2>
+        <p class="section-subtitle">Full-fledged AI architecture with personality fidelity, persistent memory, and complete server safety.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Fast AI Responses</h3>
+          <p class="feature-desc">Integrated with NVIDIA's OpenAI-compatible model pipeline (<code>openai/gpt-oss-20b</code>) for high-speed, intelligent replies without leaking hidden reasoning.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">🧠</div>
+          <h3 class="feature-title">Memory Enabled & 10MB Guard</h3>
+          <p class="feature-desc">MongoDB Atlas persistent conversation storage. Isolated private vs group context keys with automatic auto-purge safeguard if memory ever exceeds 10 MB.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">💬</div>
+          <h3 class="feature-title">Intelligent Conversations</h3>
+          <p class="feature-desc">Dual personality engine: Deep, warm, possessive, teasing girlfriend persona with "meowww" for Darling (<code>SPECIAL_USER_ID</code>), and playful sassy flair for normal users.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">🤖</div>
+          <h3 class="feature-title">Telegram AI Assistant</h3>
+          <p class="feature-desc">Full suite of moderation commands (<code>/ban</code>, <code>/unban</code>, <code>/mute</code> with timed durations, <code>/unmute</code>, <code>/promote</code>, <code>/maxpromote</code>) with complete role permission verification.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">🎭</div>
+          <h3 class="feature-title">Stickers & GIF Reactions</h3>
+          <p class="feature-desc">Preloads official Zero Two Telegram sticker packs. Maps incoming emojis and GIFs to affective moods (happy, love, smug, angry, hype) with instant in-memory matching.</p>
+        </div>
+
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">🎙️</div>
+          <h3 class="feature-title">Voice Message Transcription</h3>
+          <p class="feature-desc">Native audio download, speech-to-text processing, and Zero Two AI response cycle with automatic temp file cleanup and loving fallback responses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deployment & Architecture Guide -->
+    <section class="docs-section glass-panel">
+      <div class="docs-header">
+        <h2>Deployable to Render in Minutes</h2>
+        <p>This repository includes everything required for zero-configuration deployment to Render with persistent MongoDB Atlas integration.</p>
+      </div>
+
+      <div class="docs-steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Configure BotFather</h4>
+          <p>Create your bot with <code>/newbot</code> on Telegram BotFather and copy your <code>TELEGRAM_TOKEN</code>.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>NVIDIA API & Mongo</h4>
+          <p>Get your API key from NVIDIA build portal and create a free MongoDB Atlas M0 cluster URI.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Deploy to Render</h4>
+          <p>Connect your GitHub repo to Render as a Web Service. The included <code>render.yaml</code> auto-provisions the service.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="brand-logo footer-logo">
+          <span class="logo-horn left"></span>
+          <span class="logo-horn right"></span>
+          <span class="brand-name">Zero Two <span class="brand-accent">AI</span></span>
+        </div>
+        <p class="footer-text">Production-ready Telegram AI assistant crafted with love.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="https://t.me/zero_two_9637_bot" target="_blank" rel="noopener noreferrer">Telegram Bot</a></li>
+          <li><a href="/health" target="_blank">Health Endpoint</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Community & Links</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Ravisharma9637/zero-two-bot" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+          <li><a href="https://github.com/Ravisharma9637/" target="_blank" rel="noopener noreferrer">Owner GitHub</a></li>
+          <li><a href="https://t.me/Meow9637" target="_blank" rel="noopener noreferrer">Telegram Contact (@Meow9637)</a></li>
+          <li><a href="https://dropmail-4ckv.onrender.com/" target="_blank" rel="noopener noreferrer">Dropmail</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Zero Two AI • Developed by DEV • All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

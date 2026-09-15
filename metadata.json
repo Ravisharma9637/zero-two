@@ -1,0 +1,6 @@
+{
+  "name": "Zero Two AI",
+  "description": "Production-ready Zero Two Telegram AI Bot with MongoDB memory, NVIDIA LLM, Telegram admin commands, voice & sticker reactions, and web dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

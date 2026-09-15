@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: zero-two-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: SPECIAL_USER_ID
+        sync: false
+      - key: BOT_USERNAME
+        value: zero_two_9637_bot
+      - key: SELF_PING_URL
+        sync: false
