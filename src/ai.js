@@ -134,7 +134,7 @@ export async function generateZeroTwoResponse(userText, history = [], isDarling 
       messages,
       temperature: 1,
       top_p: 1,
-      max_tokens: 4096,
+      max_tokens: 200,
       stream: false,
     });
 
